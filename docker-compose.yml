@@ -1,0 +1,10 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP .NET Core service.
+
+version: '3.4'
+
+services:
+  cncfworkshopweb:
+    image: cncfworkshopweb
+    build:
+      context: .
+      dockerfile: app/Cncf.Workshop.Web/Dockerfile
