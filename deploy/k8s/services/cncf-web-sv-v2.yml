@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webv2
+  labels:
+    app: webv2
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: webv2
+  template:
+    metadata:
+      labels:
+        app: webv2
+    spec:
+      containers:
+      - name: cncf-webapp-v2
+        image: cncfid2022.azurecr.io/cncf/id/2022/workshop/cncfworkshopweb:v2
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 80
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-svc-v2
+spec:
+  type: ClusterIP
+  selector:
+    app: web
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80  

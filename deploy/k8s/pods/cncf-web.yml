@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cncfweb
+  labels:
+    name: cncfweb
+spec:
+  containers:
+  - name: cncfweb-app
+    image: cncfid2022.azurecr.io/cncf/id/2022/workshop/cncfworkshopweb:v1
+    imagePullPolicy: Always
+    ports:
+    - containerPort: 80
+    - containerPort: 443
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
