@@ -12,7 +12,7 @@ for linux follow this page https://learn.microsoft.com/en-us/cli/azure/install-a
    - docker https://docs.docker.com/desktop/install/linux-install/
    - kubernetes https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/  
 
-You can easily deploy you application within 10 minutes to cloud using Azure K8S Service
+You can easily deploy your application within 10 minutes to cloud using Azure K8S Service
 
 for more detail see the HOL here https://docs.google.com/document/d/12AnBmnQXIDcXH0XCV6wyB106iJnq5E9aKCcPSWhfJvI/edit?usp=sharing
 
